@@ -1,0 +1,343 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiZQ.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap; /* Ensures fallback until font is loaded */
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #141414;
+    overflow-x:hidden;
+    font-family: 'Oswald', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*Navbar*/
+
+
+.navbar {
+    background-color: rgb(245, 245, 245) !important;
+    border-top: 3px solid rgb(168, 7, 7);
+    position: fixed;
+    z-index: 99999999;
+    width: 100%;
+}
+
+@media screen and (max-width: 1077px) {
+    .navbar {
+        border-top: 2px solid rgb(168, 7, 7);
+    }
+}
+
+.navbar-nav {
+    position: relative;
+    align-items: center !important;
+}
+
+.navbar .nav-link {
+    margin: 0 2em;
+    color: #000;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.active {
+    color: rgb(168, 7, 7) !important;
+}
+
+.nav-link:hover {
+    color: rgb(168, 7, 7) !important;
+}
+
+.logo-container {
+    width: 130px;
+    height: 130px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    box-shadow: 0px 2px 14px 2px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    width: 92px;
+    height: 92px;
+    background-color: rgb(245, 245, 245);
+    margin-top: 19px;
+    margin-left: 19px;
+}
+
+@media screen and (max-width: 1025px) {
+    .logo {
+        display: none;
+    }
+}
+
+.logo2 {
+    width: 70px;
+    height: auto;
+    margin: -20px 0 -20px 10px;
+}
+
+
+/*Navbar End*/
+
+/*Footer*/
+
+.footer {
+    position: relative;
+    width: 100%;
+    border: 2px solid white;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.icon-no-underline {
+    text-decoration: none;
+}
+
+.fa-text {
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands', 'FontAwesome';
+  }
+
+
+/*Footer End*/
+
+/*Content*/
+
+
+
+.contact-us-container {
+    background-color: #000;
+    position: relative;
+}
+
+@media only screen and (max-width: 576px) {
+    .contact-us-container{
+        background-color: #141414;
+    }
+}
+
+.contact-us-img {
+    border-radius: 50% 0 0 50%;
+    filter: brightness(0.8);
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.contact-us-phone {
+   position: absolute;
+   height: 340px;
+   width: 290px;
+   background-color: rgb(245, 245, 245);
+   top: 400px;
+   right: -300px;
+   border-radius: 20px;
+   animation: slide-in-two 1s ease-out forwards;
+   animation-delay: 0.5s;
+}
+
+@keyframes slide-in-two {
+    to {
+        right: 220px; /* Final position */
+    }
+}
+
+.contact-us-email {
+    position: absolute;
+    height: 340px;
+    width: 290px;
+    background-color: rgb(245, 245, 245);
+    top: 400px;
+    left: -300px;
+    border-radius: 20px;
+    animation: slide-in 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes slide-in {
+    to {
+        left: 220px; /* Final position */
+    }
+}
+
+.get-in-touch-header {
+    color: rgb(245, 245, 245);
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 576px){
+    .get-in-touch-header {
+        text-align: center;
+    }
+}
+
+
+.get-in-touch-caption {
+    color: rgb(245, 245, 245);
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 576px){
+    .get-in-touch-caption {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+.contact-icon {
+    font-size: 60px !important;
+}
+
+
+.contact-text {
+    color: #141414;
+    font-weight: 600;
+}
+
+.heading-red {
+    color: rgb(168, 7, 7);
+}
+
+.button {
+    height: 40px;
+    width: 250px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.7s ease-in-out;
+}
+
+
+.button::after, .button::before {
+    height: 50px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 17px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.7s ease-in-out;
+    padding-bottom: 10px;
+}
+
+.button::after {
+    background-color: rgb(245, 245, 245);
+    color: #000;
+    box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.5), inset 5px 0 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(50px);
+}
+
+.button::before {
+    background-color: rgb(168, 7, 7);
+    box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.5), inset 5px 0 10px rgba(0, 0, 0, 0.5);
+    color: rgb(245, 245, 245);
+    transform: translateY(0px) scale(1.2);
+    z-index: 99999;
+}
+
+.button:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.button:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+@media only screen and (max-width: 800px) {
+    .button {
+        box-shadow: none; /* Remove box shadow on hover */
+    }
+    
+    .button:hover::after,
+    .button:hover::before {
+        transform: none; /* Remove transformations on hover */
+    }
+}
+
+/* Specific button types */
+.type1::after {
+    content: "07704 345124";
+}
+
+.type1::before {
+    content: "Call";
+}
+
+.type2::after {
+    content: "theroseandcrown@gmail.com";
+}
+
+.type2::before {
+    content: "Email";
+}
+
+.google-maps-row {
+    margin-top: 350px;
+}
+
+@media only screen and (max-width: 1200px){
+    .google-maps-row {
+        margin-top: 20px;
+    }
+}
+
+.google-maps-col-1 {
+    overflow: hidden;
+}
+
+.google-maps-col-2 {
+    border-top: 1px solid rgb(108, 117, 125);
+}
+
+@media only screen and (max-width: 768px){
+    .google-maps-col-2 {
+        border-top: none;
+    }
+}
+
+.google-map {
+    width: 100%;
+}
+
+.google-maps-col-2 {
+    color: rgb(245, 245, 245);
+    height: 450px;
+}
+
+.maps-link {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+}
